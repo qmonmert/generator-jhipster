@@ -19,7 +19,7 @@
 {
 <%_ if (clientFrameworkVue) { _%>
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-<%_ } else if (clientFrameworkAngular) { _%>
+<%_ } else { _%>
   "extends": "<%- this.relativeDir(cypressDir, clientRootDir) %>tsconfig.json",
 <%_ } _%>
   "compilerOptions": {
