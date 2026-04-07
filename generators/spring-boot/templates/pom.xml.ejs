@@ -273,6 +273,7 @@
                     </executions>
                     <configuration>
                         <mainClass>${start-class}</mainClass>
+                        <jvmArguments>-Dliquibase.analytics.enabled=false</jvmArguments>
 <%_ if (databaseTypeCouchbase && !springBoot4) { _%>
                         <loaderImplementation>CLASSIC</loaderImplementation>
 <%_ } _%>

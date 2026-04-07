@@ -39,6 +39,7 @@ springBoot {
 
 bootRun {
     args = ["--spring.profiles.active=${springProfiles}"]
+    jvmArgs = ["-Dliquibase.analytics.enabled=false"]
 <%_ if (cacheProviderInfinispan) { _%>
     jvmArgs = ["-Djgroups.tcp.address=NON_LOOPBACK", "-Djava.net.preferIPv4Stack=true"]
 <%_ } _%>
