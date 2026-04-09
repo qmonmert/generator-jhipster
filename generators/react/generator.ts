@@ -273,26 +273,6 @@ ${comment}
 
   get postWriting() {
     return this.asPostWritingTaskGroup({
-      clientBundler({ application, source }) {
-        source.mergeClientPackageJson!({
-          overrides: {
-            'react-redux-loading-bar': {
-              react: '$react',
-              'react-dom': '$react-dom',
-            },
-          },
-        });
-        if (application.clientRootDir) {
-          this.packageJson.merge({
-            overrides: {
-              'react-redux-loading-bar': {
-                react: '$react',
-                'react-dom': '$react-dom',
-              },
-            },
-          });
-        }
-      },
       addMicrofrontendDependencies({ application, source }) {
         if (!application.microfrontend) return;
         const { applicationTypeGateway } = application;
