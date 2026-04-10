@@ -19,7 +19,6 @@
 import { upperFirst } from 'lodash-es';
 import type { ComposeOptions, Storage } from 'yeoman-generator';
 
-import { getConfigWithDefaults } from '../../lib/jhipster/default-application-options.ts';
 import type { Entity as BaseEntity } from '../../lib/jhipster/types/entity.ts';
 import type { GenericTask } from '../base-core/types.ts';
 import BaseGenerator from '../base-simple-application/index.ts';
@@ -175,13 +174,6 @@ export default class BaseApplicationGenerator<
       entityName: key,
       entity: value as any,
     }));
-  }
-
-  /**
-   * JHipster config with default values fallback
-   */
-  override get jhipsterConfigWithDefaults(): Readonly<Config> {
-    return getConfigWithDefaults(super.jhipsterConfigWithDefaults) as Config;
   }
 
   /**
