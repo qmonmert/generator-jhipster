@@ -26,7 +26,6 @@ import type { Application as BaseApplicationApplication, Entity as BaseApplicati
 import { loadDockerDependenciesTask, loadDockerElasticsearchVersion } from '../../../base-workspaces/internal/docker-dependencies.ts';
 import prepareSqlApplicationProperties from '../../../spring-boot/generators/data-relational/support/application-properties.ts';
 import type { Application as SpringDataRelationalApplication } from '../../../spring-boot/generators/data-relational/types.d.ts';
-import serverCommand from '../../command.ts';
 import {
   addEntitiesOtherRelationships,
   getPrimaryKeyValue,
@@ -36,18 +35,9 @@ import {
   preparePostEntityServerDerivedProperties,
   prepareRelationship,
 } from '../../support/index.ts';
-import type {
-  Application as ServerApplication,
-  Entity as ServerEntity,
-  Features as ServerFeatures,
-  Options as ServerOptions,
-} from '../../types.ts';
+import type { Application as ServerApplication, Entity as ServerEntity } from '../../types.ts';
 
 export default class ServerBootstrapGenerator extends BaseApplicationGenerator<ServerEntity, ServerApplication> {
-  constructor(args?: string[], options?: ServerOptions, features?: ServerFeatures) {
-    super(args, options, { loadCommand: [serverCommand], ...features });
-  }
-
   async beforeQueue() {
     if (!this.fromBlueprint) {
       await this.composeWithBlueprints();

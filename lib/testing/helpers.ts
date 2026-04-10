@@ -350,6 +350,16 @@ class JHipsterRunContext extends RunContext<BaseCoreGenerator> {
     } as unknown as ApplicationAll);
   }
 
+  // Register importModule to have actual command for command lookups.
+  override withMockedGenerators(generators: string[]): this {
+    return super.withMockedGenerators(generators).onEnvironment(env => {
+      for (const gen of generators.filter(gen => gen.startsWith('jhipster:'))) {
+        const meta = (env as any).store.getMeta(gen);
+        meta!.importModule = () => import(getGenerator(gen));
+      }
+    });
+  }
+
   /**
    * Mock every built-in generators except the ones in the except and bootstrap-* generators.
    * Note: Bootstrap generator is mocked by default.
