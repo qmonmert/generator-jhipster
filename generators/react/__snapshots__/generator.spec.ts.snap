@@ -381,6 +381,9 @@ exports[`generator - react gateway-jwt-skipUserManagement(true)-withAdminUi(fals
   "clientRoot/src/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -621,6 +624,9 @@ exports[`generator - react gateway-jwt-skipUserManagement(true)-withAdminUi(fals
   "clientRoot/src/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/shared/reducers/reducer.utils.ts": {
     "stateCleared": "modified",
   },
@@ -788,14 +794,6 @@ exports[`generator - react gateway-jwt-skipUserManagement(true)-withAdminUi(fals
     ],
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "eslint-config-prettier": "ESLINT_CONFIG_PRETTIER_VERSION",
@@ -1178,6 +1176,9 @@ exports[`generator - react gateway-oauth2-withAdminUi(true)-skipJhipsterDependen
   "clientRoot/src/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -1436,6 +1437,9 @@ exports[`generator - react gateway-oauth2-withAdminUi(true)-skipJhipsterDependen
   "clientRoot/src/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/shared/reducers/locale.spec.ts": {
     "stateCleared": "modified",
   },
@@ -1618,14 +1622,6 @@ exports[`generator - react gateway-oauth2-withAdminUi(true)-skipJhipsterDependen
     ],
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "eslint-config-prettier": "ESLINT_CONFIG_PRETTIER_VERSION",
@@ -2017,6 +2013,9 @@ exports[`generator - react microservice-jwt-skipUserManagement(false)-withAdminU
   "clientRoot/src/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -2260,6 +2259,9 @@ exports[`generator - react microservice-jwt-skipUserManagement(false)-withAdminU
   "clientRoot/src/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "clientRoot/src/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "clientRoot/src/app/shared/reducers/reducer.utils.ts": {
     "stateCleared": "modified",
   },
@@ -2435,14 +2437,6 @@ exports[`generator - react microservice-jwt-skipUserManagement(false)-withAdminU
     },
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "@module-federation/enhanced": null,
@@ -2829,6 +2823,9 @@ exports[`generator - react microservice-oauth2-withAdminUi(true)-skipJhipsterDep
   "src/main/webapp/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -3090,6 +3087,9 @@ exports[`generator - react microservice-oauth2-withAdminUi(true)-skipJhipsterDep
   "src/main/webapp/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/shared/reducers/locale.spec.ts": {
     "stateCleared": "modified",
   },
@@ -3277,14 +3277,6 @@ exports[`generator - react microservice-oauth2-withAdminUi(true)-skipJhipsterDep
     },
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "@module-federation/enhanced": null,
@@ -3673,6 +3665,9 @@ exports[`generator - react monolith-jwt-skipUserManagement(false)-withAdminUi(tr
   "src/main/webapp/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -4000,6 +3995,9 @@ exports[`generator - react monolith-jwt-skipUserManagement(false)-withAdminUi(tr
   "src/main/webapp/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/shared/reducers/locale.spec.ts": {
     "stateCleared": "modified",
   },
@@ -4170,14 +4168,6 @@ exports[`generator - react monolith-jwt-skipUserManagement(false)-withAdminUi(tr
     ],
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "eslint-config-prettier": "ESLINT_CONFIG_PRETTIER_VERSION",
@@ -4569,6 +4559,9 @@ exports[`generator - react monolith-oauth2-withAdminUi(false)-skipJhipsterDepend
   "src/main/webapp/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -4803,6 +4796,9 @@ exports[`generator - react monolith-oauth2-withAdminUi(false)-skipJhipsterDepend
   "src/main/webapp/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/shared/reducers/reducer.utils.ts": {
     "stateCleared": "modified",
   },
@@ -4976,14 +4972,6 @@ exports[`generator - react monolith-oauth2-withAdminUi(false)-skipJhipsterDepend
     ],
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "eslint-config-prettier": "ESLINT_CONFIG_PRETTIER_VERSION",
@@ -5376,6 +5364,9 @@ exports[`generator - react monolith-session-skipUserManagement(true)-withAdminUi
   "src/main/webapp/app/config/icon-loader.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/config/loading-bar-middleware.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/config/logger-middleware.ts": {
     "stateCleared": "modified",
   },
@@ -5613,6 +5604,9 @@ exports[`generator - react monolith-session-skipUserManagement(true)-withAdminUi
   "src/main/webapp/app/shared/reducers/index.ts": {
     "stateCleared": "modified",
   },
+  "src/main/webapp/app/shared/reducers/loading-bar.ts": {
+    "stateCleared": "modified",
+  },
   "src/main/webapp/app/shared/reducers/reducer.utils.ts": {
     "stateCleared": "modified",
   },
@@ -5777,14 +5771,6 @@ exports[`generator - react monolith-session-skipUserManagement(true)-withAdminUi
     ],
   ],
   "mergeClientPackageJson": [
-    {
-      "overrides": {
-        "react-redux-loading-bar": {
-          "react": "$react",
-          "react-dom": "$react-dom",
-        },
-      },
-    },
     {
       "devDependencies": {
         "eslint-config-prettier": "ESLINT_CONFIG_PRETTIER_VERSION",

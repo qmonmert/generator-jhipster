@@ -61,6 +61,7 @@ export const files = asWriteFilesSection({
         'config/notification-middleware.ts',
         'config/store.ts',
         'config/icon-loader.ts',
+        'config/loading-bar-middleware.ts',
       ],
     },
     {
@@ -112,6 +113,7 @@ export const files = asWriteFilesSection({
         'shared/reducers/reducer.utils.ts',
         'shared/reducers/authentication.ts',
         'shared/reducers/application-profile.ts',
+        'shared/reducers/loading-bar.ts',
       ],
     },
     {
