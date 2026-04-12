@@ -435,7 +435,7 @@ You can ignore this error by passing '--skip-checks' to jhipster command.`);
           getCommandDerivedPropertyMutations(directCommandsMergedConfigs),
         );
 
-        const imports = directCommands.map(command => command.import ?? []).flat();
+        const imports = directCommands.flatMap(command => command.import ?? []);
         if (imports.length > 0 || loadCommand.length > 0) {
           // Populate imported commands and loadCommand, to allow the generator itself to load them.
           this.queueTask({
@@ -445,10 +445,7 @@ You can ignore this error by passing '--skip-checks' to jhipster command.`);
             async method() {
               const importedCommandNamespaces = [
                 ...loadCommand.filter(l => typeof l === 'string'),
-                ...loadCommand
-                  .filter(l => typeof l === 'object')
-                  .map(l => l.import ?? [])
-                  .flat(),
+                ...loadCommand.filter(l => typeof l === 'object').flatMap(l => l.import ?? []),
                 ...imports,
               ];
               const importedCommands = [
