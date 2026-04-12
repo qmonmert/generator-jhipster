@@ -106,35 +106,35 @@ export default class CoreGenerator<
   Options extends CoreOptions = CoreOptions,
   Features extends CoreFeatures = CoreFeatures,
 > extends YeomanGenerator<Config, Options, Features> {
-  static asPriority = asPriority;
+  static readonly asPriority = asPriority;
 
-  static INITIALIZING = asPriority(INITIALIZING);
+  static readonly INITIALIZING = asPriority(INITIALIZING);
 
-  static PROMPTING = asPriority(PROMPTING);
+  static readonly PROMPTING = asPriority(PROMPTING);
 
-  static CONFIGURING = asPriority(CONFIGURING);
+  static readonly CONFIGURING = asPriority(CONFIGURING);
 
-  static COMPOSING = asPriority(COMPOSING);
+  static readonly COMPOSING = asPriority(COMPOSING);
 
-  static COMPOSING_COMPONENT = asPriority(COMPOSING_COMPONENT);
+  static readonly COMPOSING_COMPONENT = asPriority(COMPOSING_COMPONENT);
 
-  static LOADING = asPriority(LOADING);
+  static readonly LOADING = asPriority(LOADING);
 
-  static PREPARING = asPriority(PREPARING);
+  static readonly PREPARING = asPriority(PREPARING);
 
-  static POST_PREPARING = asPriority(POST_PREPARING);
+  static readonly POST_PREPARING = asPriority(POST_PREPARING);
 
-  static DEFAULT = asPriority(DEFAULT);
+  static readonly DEFAULT = asPriority(DEFAULT);
 
-  static WRITING = asPriority(WRITING);
+  static readonly WRITING = asPriority(WRITING);
 
-  static POST_WRITING = asPriority(POST_WRITING);
+  static readonly POST_WRITING = asPriority(POST_WRITING);
 
-  static INSTALL = asPriority(INSTALL);
+  static readonly INSTALL = asPriority(INSTALL);
 
-  static POST_INSTALL = asPriority(POST_INSTALL);
+  static readonly POST_INSTALL = asPriority(POST_INSTALL);
 
-  static END = asPriority(END);
+  static readonly END = asPriority(END);
 
   useVersionPlaceholders?: boolean;
   skipChecks?: boolean;
