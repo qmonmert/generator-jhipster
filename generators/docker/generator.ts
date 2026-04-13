@@ -65,7 +65,7 @@ export default class DockerGenerator extends BaseApplicationGenerator<Applicatio
 
           const faker = await createFaker();
           faker.seed(stringHashCode(application.baseName));
-          application.keycloakSecrets = Array.from(Array(6), () => faker.string.uuid());
+          application.keycloakSecrets = Array.from(new Array(6), () => faker.string.uuid());
         }
         if (application.searchEngineElasticsearch) {
           dockerServices.push('elasticsearch');
