@@ -127,21 +127,21 @@ export default class BaseApplicationGenerator<
   Features extends BaseApplicationFeatures = BaseApplicationFeatures,
   Tasks extends DefaultTasks<Entity, Application, Source> = DefaultTasks<Entity, Application, Source>,
 > extends BaseGenerator<Application, Config, Options, Source, Features, Tasks> {
-  static CONFIGURING_EACH_ENTITY = asPriority(CONFIGURING_EACH_ENTITY);
+  static readonly CONFIGURING_EACH_ENTITY = asPriority(CONFIGURING_EACH_ENTITY);
 
-  static LOADING_ENTITIES = asPriority(LOADING_ENTITIES);
+  static readonly LOADING_ENTITIES = asPriority(LOADING_ENTITIES);
 
-  static PREPARING_EACH_ENTITY = asPriority(PREPARING_EACH_ENTITY);
+  static readonly PREPARING_EACH_ENTITY = asPriority(PREPARING_EACH_ENTITY);
 
-  static PREPARING_EACH_ENTITY_FIELD = asPriority(PREPARING_EACH_ENTITY_FIELD);
+  static readonly PREPARING_EACH_ENTITY_FIELD = asPriority(PREPARING_EACH_ENTITY_FIELD);
 
-  static PREPARING_EACH_ENTITY_RELATIONSHIP = asPriority(PREPARING_EACH_ENTITY_RELATIONSHIP);
+  static readonly PREPARING_EACH_ENTITY_RELATIONSHIP = asPriority(PREPARING_EACH_ENTITY_RELATIONSHIP);
 
-  static POST_PREPARING_EACH_ENTITY = asPriority(POST_PREPARING_EACH_ENTITY);
+  static readonly POST_PREPARING_EACH_ENTITY = asPriority(POST_PREPARING_EACH_ENTITY);
 
-  static WRITING_ENTITIES = asPriority(WRITING_ENTITIES);
+  static readonly WRITING_ENTITIES = asPriority(WRITING_ENTITIES);
 
-  static POST_WRITING_ENTITIES = asPriority(POST_WRITING_ENTITIES);
+  static readonly POST_WRITING_ENTITIES = asPriority(POST_WRITING_ENTITIES);
 
   constructor(args?: string[], options?: Options, features?: Features) {
     super(args, options, features as Features);

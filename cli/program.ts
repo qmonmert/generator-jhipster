@@ -351,7 +351,7 @@ export const buildCommands = ({
         if (cliOnly) {
           logger.debug('Executing CLI only script');
           const cliOnlyCommand = await loadCommand(cmdName);
-          return cliOnlyCommand instanceof Function ?
+          return typeof cliOnlyCommand === 'function' ?
               cliOnlyCommand(args, options, env, envBuilder, createEnvBuilder)
             : Promise.reject(new Error(`Command ${cmdName} is not a function.`));
         }
