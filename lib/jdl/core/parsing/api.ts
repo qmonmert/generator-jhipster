@@ -77,5 +77,7 @@ function throwErrorAboutInvalidToken(parserError: IRecognitionException) {
 }
 
 function throwSyntaxError(errors: IRecognitionException[]) {
-  throw new Error(errors.map(error => `${error.message}\n\tat line: ${error.token.startLine}, column: ${error.token.startColumn}`).join('\n'));
+  throw new Error(
+    errors.map(error => `${error.message}\n\tat line: ${error.token.startLine}, column: ${error.token.startColumn}`).join('\n'),
+  );
 }
