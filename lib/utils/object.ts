@@ -98,7 +98,6 @@ export type MutateDataPropertiesWithRequiredProperties<D extends Record<string, 
 const OverrideMutation = Symbol('OverrideMutation');
 
 export type MutateDataFunction = ((ctx: any, opts: MutateDataCallbackOptions) => any) & { [OverrideMutation]?: boolean };
-type MutateDataOptions = { autoDelay: boolean };
 type MutationContextOptions = {
   autoDelay?: boolean;
   delayContext: Record<string, MutateDataFunction[]>;
@@ -160,7 +159,7 @@ const handleMutateDataCallback = (fn: MutateDataFunction, context: any, { defaul
 
 const applyDelayedMutations = (
   context: ContextWithMutationOptions<object>,
-  opts?: { defaults?: boolean; throwOnDelay?: boolean } & Partial<MutateDataOptions>,
+  opts?: { defaults?: boolean; throwOnDelay?: boolean },
 ): boolean => {
   let mutationApplied = false;
   const delayedContext = context[MUTATION_CONTEXT_SYMBOL].delayContext;
@@ -200,10 +199,10 @@ const applyDelayedMutations = (
 
 export const finalizeMutations = (context: any): void => {
   if (isMutationContext(context)) {
-    const { autoDelay = false } = context[MUTATION_CONTEXT_SYMBOL];
-    while (applyDelayedMutations(context, { defaults: true, autoDelay })) {
+    while (applyDelayedMutations(context, { defaults: true })) {
       // Apply mutations until there is no more mutation to apply, this is to handle mutations that depend on other mutations.
     }
+    context[MUTATION_CONTEXT_SYMBOL].autoDelay = false;
     // In case there is still delayed mutations, it means that some required properties are missing, we throw an error to avoid silent issues.
     applyDelayedMutations(context, { defaults: true, throwOnDelay: true });
     delete context[MUTATION_CONTEXT_SYMBOL];
@@ -229,12 +228,18 @@ export const finalizeMutations = (context: any): void => {
  *   { __override__: false, prop: () => 'won\'t override' },
  * );
  */
-export function mutateData<T extends Record<string | number, any>>(context: T, ...mutations: MutateDataParam<T>[]): void {
+export function mutateData<T extends Record<string | number, any>>(
+  context: T,
+  ...mutations: (MutateDataParam<T> | ((data: T) => MutateDataParam<T>))[]
+): void {
   if (typeof context !== 'object' || context === null || Array.isArray(context)) {
     throw new Error('Context should be a non null and non array object');
   }
 
-  for (const mutation of mutations) {
+  for (let mutation of mutations) {
+    if (typeof mutation === 'function') {
+      mutation = mutation(context);
+    }
     const override = mutation.__override__;
     const mutationEntries = Object.entries(mutation).filter(([key]) => key !== '__override__');
     if (mutationEntries.length === 0) {
