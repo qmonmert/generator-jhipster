@@ -700,8 +700,7 @@ export default class LiquibaseGenerator extends BaseEntityChangesGenerator<
     }
 
     if (this._requiresWritingFakeData(changelogData)) {
-      promises.push(this.writeFiles({ sections: fakeFiles, context }));
-      promises.push(this.writeFiles({ sections: updateMigrateFiles, context }));
+      promises.push(this.writeFiles({ sections: fakeFiles, context }), this.writeFiles({ sections: updateMigrateFiles, context }));
     }
 
     if (this._requiresConstraintUpdates(changelogData)) {
