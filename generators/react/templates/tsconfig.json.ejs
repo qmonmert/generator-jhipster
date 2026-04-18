@@ -36,9 +36,7 @@
     "paths": {
         "app/*": ["./<%- this.relativeDir(clientRootDir, clientSrcDir) %>app/*"]
     },
-    "importHelpers": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "importHelpers": true
   },
   "include": ["<%- this.relativeDir(clientRootDir, clientSrcDir) %>app"],
   "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"]
