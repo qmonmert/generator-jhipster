@@ -42,7 +42,7 @@ import type {
 import BaseEntityChangesGenerator from '../base-entity-changes/index.ts';
 import type { BaseChangelog } from '../base-entity-changes/types.ts';
 import { mutateField as commonMutateField } from '../common/entity.ts';
-import type { Entity as CommonEntity, Field as CommonField } from '../common/types.ts';
+import type { Field as CommonField } from '../common/types.ts';
 import { prepareEntity as prepareEntityForServer } from '../java/support/index.ts';
 import type { MavenProperty } from '../java-simple-application/generators/maven/types.ts';
 import { getFKConstraintName, getUXConstraintName, prepareField as prepareServerFieldForTemplates } from '../server/support/index.ts';
@@ -231,9 +231,9 @@ export default class LiquibaseGenerator extends BaseEntityChangesGenerator<
               this.jhipsterConfigWithDefaults as BaseApplicationApplication<BaseApplicationEntity>,
             );
             // TODO fix types
-            prepareEntity(entity as unknown as CommonEntity, this);
+            prepareEntity(entity, this);
             // TODO fix types
-            prepareEntityForServer(entity, application as any);
+            prepareEntityForServer(entity, application);
             if (!entity.embedded && !entity.primaryKey) {
               prepareEntityPrimaryKeyForTemplates.call(this, { entity: entity as unknown as EntityAll, application });
             }

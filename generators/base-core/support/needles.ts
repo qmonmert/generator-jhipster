@@ -374,7 +374,7 @@ export function createBaseNeedle<Generator extends CoreGenerator = CoreGenerator
   needles?: Record<string, string>,
 ): EditFileCallback<Generator> | CascatedEditFileCallback<Generator> {
   const actualNeedles = (needles ??= options as Record<string, string>);
-  const actualOptions: Partial<NeedleFileInsertion> | undefined = needles === undefined ? {} : (options as NeedleFileInsertion);
+  const actualOptions: Partial<NeedleFileInsertion> | undefined = needles === undefined ? {} : options;
 
   assert(actualNeedles, 'needles is required');
   const { needlesPrefix, filePath, ...needleOptions } = actualOptions;
