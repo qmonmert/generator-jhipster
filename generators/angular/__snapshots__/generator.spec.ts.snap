@@ -1815,9 +1815,7 @@ export class UserManagementFormService {
     form: UserManagementFormGroup,
   ): IUserManagement | NewUserManagement {
     return this.convertUserManagementRawValueToUserManagement(
-      form.getRawValue() as
-        | UserManagementFormRawValue
-        | NewUserManagementFormRawValue,
+      form.getRawValue(),
     );
   }
 

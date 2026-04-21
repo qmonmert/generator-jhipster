@@ -100,7 +100,7 @@ describe('Main', () => {
     const parentRoutePageTitle = 'parentTitle';
     const childRoutePageTitle = 'childTitle';
 <%_ if (enableTranslation) { _%>
-    const langChangeEvent: LangChangeEvent = { lang: '<%- nativeLanguage %>', translations: {} as InterpolatableTranslationObject };
+    const langChangeEvent: LangChangeEvent = { lang: '<%- nativeLanguage %>', translations: {} };
 <%_ } _%>
 
     beforeEach(() => {
@@ -264,7 +264,7 @@ describe('Main', () => {
   <%_ if (enableI18nRTL) { _%>
       findLanguageFromKeyPipe.isRTL = <%- clientTestFramework %>.fn(() => false);
   <%_ } _%>
-      langChangeSubject.next({ lang: 'lang1', translations: {} as InterpolatableTranslationObject });
+      langChangeSubject.next({ lang: 'lang1', translations: {} });
 
       // THEN
       expect(document.querySelector('html')?.getAttribute('lang')).toEqual('lang1');
@@ -276,7 +276,7 @@ describe('Main', () => {
   <%_ if (enableI18nRTL) { _%>
       findLanguageFromKeyPipe.isRTL = <%- clientTestFramework %>.fn(() => true);
   <%_ } _%>
-      langChangeSubject.next({ lang: 'lang2', translations: {} as InterpolatableTranslationObject });
+      langChangeSubject.next({ lang: 'lang2', translations: {} });
 
       // THEN
       expect(document.querySelector('html')?.getAttribute('lang')).toEqual('lang2');

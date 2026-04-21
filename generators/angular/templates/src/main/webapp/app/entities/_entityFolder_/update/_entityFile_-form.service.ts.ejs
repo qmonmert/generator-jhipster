@@ -157,9 +157,9 @@ export class <%- entityAngularName %>FormService {
 
   get<%- entityAngularName %>(form: <%- entityAngularName %>FormGroup):<% if (updatableEntity) { %> I<%- entityAngularName %> |<% } %> New<%- entityAngularName %> {
 <%_ if (anyFieldIsTimeDerived) { _%>
-    return this.convert<%- entityAngularName %>RawValueTo<%- entityAngularName %>(form.getRawValue() as <%- entityAngularName %>FormRawValue | New<%- entityAngularName %>FormRawValue);
+    return this.convert<%- entityAngularName %>RawValueTo<%- entityAngularName %>(form.getRawValue());
 <%_ } else { _%>
-    return form.getRawValue() as<% if (updatableEntity) { %> I<%- entityAngularName %> |<% } %> New<%- entityAngularName %>;
+    return form.getRawValue()<% if (!updatableEntity) { %> as New<%- entityAngularName %><% } %>;
 <%_ } _%>
   }
 
