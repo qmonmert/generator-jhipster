@@ -1,0 +1,47 @@
+generatedAt: "2026-04-21T20:24:55.944Z"
+rule: misc
+count: 4
+details:
+  code: missing-required-inputs
+  path: /Users/quentin/Documents/Tech/JHipster/generator-jhipster
+occurrences[4]:
+  - key: "generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml:26:6:0"
+    file: generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml
+    line: 27
+    textRange:
+      startLine: 27
+      endLine: 28
+      startOffset: 6
+      endOffset: 0
+    message: Missing required input `distribution`
+    severity: BLOCKER
+  - key: "generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml:27:6:1"
+    file: generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml
+    line: 28
+    textRange:
+      startLine: 28
+      endLine: 29
+      startOffset: 6
+      endOffset: 0
+    message: Missing required input `path`
+    severity: BLOCKER
+  - key: "generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml:28:6:2"
+    file: generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml
+    line: 29
+    textRange:
+      startLine: 29
+      endLine: 30
+      startOffset: 6
+      endOffset: 0
+    message: Missing required input `generator-path`
+    severity: BLOCKER
+  - key: "generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml:29:6:3"
+    file: generators/ci-cd/generators/bootstrap/resources/dependabot/action.yml
+    line: 30
+    textRange:
+      startLine: 30
+      endLine: 31
+      startOffset: 6
+      endOffset: 0
+    message: "Missing required inputs: `generator-path`, `cmd`"
+    severity: BLOCKER
