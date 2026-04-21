@@ -7,11 +7,5 @@
   "mochaExplorer.ui": "tdd",
   "mochaExplorer.configFile": ".mocharc.cjs",
   "mochaExplorer.require": "esmocha/mocha",
-  "mochaExplorer.nodeArgv": [
-    "--loader=esmocha/loader"
-  ],
-  "sonarlint.connectedMode.project": {
-    "connectionId": "JH",
-    "projectKey": "jhipster-sample-application"
-  }
+  "mochaExplorer.nodeArgv": ["--loader=esmocha/loader"]
 }
