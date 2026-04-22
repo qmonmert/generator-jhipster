@@ -17,6 +17,7 @@
  * limitations under the License.
  */
 export * from './needles.ts';
+// TODO: maintenance - Track the removal of backwards compatibility code in v10.
 // TODO Backwards compatibility, to be removed in v10
 export * from '../../../lib/utils/os.ts';
 export * from './properties-file.ts';

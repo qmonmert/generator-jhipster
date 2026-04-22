@@ -23,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 export * from '../lib/constants/yeoman.ts';
 export * from '../lib/constants/jhipster.ts';
 
+// TODO: maintenance - Review and update constants for the upcoming JHipster 10 release.
 export const BLUEPRINT_API_VERSION = 'jhipster-8';
 // jhipster-bom version
 export const JHIPSTER_DEPENDENCIES_VERSION = '9.0.0';
