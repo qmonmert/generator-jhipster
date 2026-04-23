@@ -47,7 +47,7 @@ describe('User Management Update Component', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            data: of({ user: { id: <%- tsKeyId %>, login: 'user', firstName: 'first', lastName: 'last', email: 'first@last.com', activated: true, langKey: 'en', authorities: [Authority.USER], createdBy: 'admin' } as IUserManagement }),
+            data: of({ user: { id: <%- tsKeyId %>, login: 'user', firstName: 'first', lastName: 'last', email: 'first@last.com', activated: true, langKey: 'en', authorities: [Authority.USER], createdBy: 'admin' }}),
           },
         },
       ],

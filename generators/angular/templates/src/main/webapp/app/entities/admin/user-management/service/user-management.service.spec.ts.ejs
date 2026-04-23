@@ -54,7 +54,7 @@ describe('User Service', () => {
       });
 
       const req = httpMock.expectOne({ method: 'GET' });
-      req.flush({ id: <%- tsKeyId %>, login: 'user' } as IUserManagement);
+      req.flush({ id: <%- tsKeyId %>, login: 'user' });
       expect(expectedResult).toEqual('user');
     });
 
