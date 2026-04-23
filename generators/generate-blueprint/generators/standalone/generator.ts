@@ -138,7 +138,7 @@ export default class StandaloneBlueprintGenerator extends GenerateBlueprintBaseG
         const mainDependencies: Record<string, string> = {
           ...jhipsterPackageJson.dependencies,
           ...jhipsterPackageJson.devDependencies,
-        } as Record<string, string>;
+        };
         this.loadNodeDependenciesFromPackageJson(
           mainDependencies,
           this.fetchFromInstalledJHipster('generate-blueprint/resources/package.json'),

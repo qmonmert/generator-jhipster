@@ -143,7 +143,7 @@ const createNotYetDefinedProxy = (target: Record<string | number, any>): any =>
 
 const handleMutateDataCallback = (fn: MutateDataFunction, context: any, { defaults }: { defaults?: boolean }): any => {
   const mutationContext = isMutationContext(context);
-  const { autoDelay = false } = mutationContext ? (context[MUTATION_CONTEXT_SYMBOL] ?? {}) : ({} as MutationContextOptions);
+  const { autoDelay = false } = mutationContext ? (context[MUTATION_CONTEXT_SYMBOL] ?? {}) : {};
   try {
     return fn(
       autoDelay ? createNotYetDefinedProxy(context) : context,

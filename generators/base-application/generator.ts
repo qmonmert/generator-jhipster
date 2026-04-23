@@ -144,7 +144,7 @@ export default class BaseApplicationGenerator<
   static readonly POST_WRITING_ENTITIES = asPriority(POST_WRITING_ENTITIES);
 
   constructor(args?: string[], options?: Options, features?: Features) {
-    super(args, options, features as Features);
+    super(args, options, features);
 
     if (this.options.help) {
       return;

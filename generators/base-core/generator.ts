@@ -378,7 +378,7 @@ You can ignore this error by passing '--skip-checks' to jhipster command.`);
           const commandModule: any = await commandMeta?.importModule?.();
           const command = commandModule?.command as JHipsterCommandDefinition | undefined;
           if (command) {
-            result.push(command as SetRequired<JHipsterCommandDefinition, 'configs'>);
+            result.push(command);
             if (loadImports) {
               result.push(...(await collectNamespaceCommands({ loadImports: true }, ...(command.import ?? []))));
             }

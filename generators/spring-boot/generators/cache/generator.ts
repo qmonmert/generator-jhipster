@@ -265,7 +265,7 @@ export default class SpringCacheGenerator extends SpringBootApplicationGenerator
           for (const entity of entities.filter(entity => !entity.skipServer && !entity.builtInUser)) {
             source.addEntityToCache?.({
               entityAbsoluteClass: entity.entityAbsoluteClass,
-              relationships: entity.relationships as any,
+              relationships: entity.relationships,
             });
           }
         }

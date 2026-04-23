@@ -350,7 +350,7 @@ class JHipsterRunContext extends RunContext<BaseCoreGenerator> {
         {},
         { get: (target: any, prop) => (typeof prop === 'symbol' ? target[prop] : `${snakeCase(prop).toUpperCase()}_VERSION`) },
       ),
-    } as unknown as ApplicationAll);
+    });
   }
 
   // Register importModule to have actual command for command lookups.
