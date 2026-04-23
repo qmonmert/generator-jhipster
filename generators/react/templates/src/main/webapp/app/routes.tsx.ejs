@@ -56,7 +56,9 @@ const Admin = React.lazy(() => import(/* webpackChunkName: "administration" */ '
 
   <%_ for (const remote of microfrontends) { _%>
 const <%- remote.capitalizedBaseName %>Routes = React.lazy(() =>
-  loadRemote<any>('<%- remote.lowercaseBaseName %>/entities-routes').catch(() => import('app/shared/error/error-loading')),
+  loadRemote<any>('<%- remote.lowercaseBaseName %>/entities-routes')
+    .then(module => ({ default: module.default || module }))
+    .catch(() => import('app/shared/error/error-loading')),
 );
 
   <%_ } _%>
