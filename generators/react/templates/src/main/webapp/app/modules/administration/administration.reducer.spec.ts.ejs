@@ -262,12 +262,12 @@ describe('Administration reducer tests', () => {
   describe('Actions', () => {
 <%_ if (applicationTypeGateway && gatewayServicesApiAvailable || withAdminUi) { _%>
     const resolvedObject = { value: 'whatever' };
-    const getState = jest.fn();
-    const dispatch = jest.fn();
+    const getState = vi.fn();
+    const dispatch = vi.fn();
     const extra = {};
     beforeEach(() => {
-      axios.get = jest.fn().mockResolvedValue(resolvedObject);
-      axios.post = jest.fn().mockResolvedValue(resolvedObject);
+      axios.get = vi.fn().mockResolvedValue(resolvedObject);
+      axios.post = vi.fn().mockResolvedValue(resolvedObject);
     });
 <%_ } _%>
 <%_ if (applicationTypeGateway && gatewayServicesApiAvailable) { _%>
