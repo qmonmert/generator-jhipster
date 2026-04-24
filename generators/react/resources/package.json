@@ -28,7 +28,6 @@
     "@eslint-react/eslint-plugin": "4.2.3",
     "@eslint/js": "10.0.1",
     "@module-federation/enhanced": "2.3.3",
-    "@module-federation/utilities": "3.1.83",
     "@testing-library/react": "16.3.2",
     "@types/jest": "30.0.0",
     "@types/node": "22.19.17",

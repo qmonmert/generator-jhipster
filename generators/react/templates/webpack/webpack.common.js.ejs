@@ -63,6 +63,11 @@ module.exports = async options => {
 <%_ } _%>
 return merge(
 {
+<%_ if (applicationTypeGateway && microfrontend) { _%>
+  experiments: {
+    topLevelAwait: true,
+  },
+<%_ } _%>
   cache: {
     // 1. Set cache type to filesystem
     type: 'filesystem',
