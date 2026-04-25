@@ -103,7 +103,7 @@ export default class ReactGenerator extends ClientApplicationGenerator<
       async javaNodeBuildPaths({ application }) {
         const { clientBundlerWebpack, javaNodeBuildPaths } = application;
 
-        javaNodeBuildPaths?.push('.postcss.config.js', 'tsconfig.json');
+        javaNodeBuildPaths?.push('.postcss.config.js', 'tsconfig.json', 'vite.config.ts', 'vitest.config.ts');
         if (clientBundlerWebpack) {
           javaNodeBuildPaths?.push('webpack/');
         }
@@ -305,8 +305,8 @@ ${comment}
         const { clientI18nDir, clientDistDir, clientSrcDir, temporaryDir } = application;
         source.addSonarProperties?.([
           { key: 'sonar.test.inclusions', value: `${clientSrcDir}app/**/*.spec.ts, ${clientSrcDir}app/**/*.spec.tsx`, valueSep: ', ' },
-          { key: 'sonar.testExecutionReportPaths', value: `${temporaryDir}test-results/jest/TESTS-results-sonar.xml` },
-          { key: 'sonar.javascript.lcov.reportPaths', value: `${temporaryDir}test-results/lcov.info` },
+          { key: 'sonar.testExecutionReportPaths', value: `${temporaryDir}test-results/jest/TESTS-results-vitest.xml` },
+          { key: 'sonar.javascript.lcov.reportPaths', value: `${temporaryDir}test-results/lcov-report/lcov.info` },
           {
             key: 'sonar.exclusions',
             value: `${clientSrcDir}content/**/*.*, ${clientI18nDir}*.ts, ${clientDistDir}**/*.*`,
