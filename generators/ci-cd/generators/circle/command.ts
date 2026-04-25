@@ -16,8 +16,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { createCiCdCommand } from './support/command.ts';
+import { createCiCdCommand } from '../../support/command.ts';
 
-const command = createCiCdCommand();
+const command = createCiCdCommand('circle');
 
 export default command;

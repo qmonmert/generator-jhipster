@@ -28,7 +28,7 @@ export default class BootstrapGenerator extends BaseSimpleApplicationGenerator<C
       await this.composeWithBlueprints();
     }
 
-    if (this.options.commandName === 'ci-cd') {
+    if (this.options.commandName?.startsWith('ci-cd')) {
       await this.dependsOnBootstrap('app');
     }
   }
