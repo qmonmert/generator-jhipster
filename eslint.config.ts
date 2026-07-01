@@ -12,6 +12,9 @@ import ts from 'typescript-eslint';
 import { jsRules } from './lib/eslint/base.ts';
 import jhipster from './lib/eslint/index.ts';
 
+// TODO: maintenance - Upgrade to ESLint 10 and review the new rules.
+// TODO: package hygiene - Investigate the @iarna/toml version anomaly in package.json (current: 3.0.0, latest: 2.2.5).
+
 const tsFiles = ['**/*.{ts,mts,cts}'];
 const jsFiles = ['**/*.{js,cjs,mjs}'];
 const jsTsFiles = [...jsFiles, ...tsFiles];

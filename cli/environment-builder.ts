@@ -189,6 +189,7 @@ export default class EnvironmentBuilder {
       );
     });
 
+    // TODO: maintenance - Ensure all legacy aliases planned for removal in JHipster 10 are identified.
     // TODO: remove aliases in JHipster 10
     for (const [alias, gen] of [
       ['bootstrap-application', 'app:bootstrap'],
